@@ -1,0 +1,38 @@
+diff --git a/gtk-osx/modulesets-stable/gtk-osx-gtkmm.modules b/gtk-osx/modulesets-stable/gtk-osx-gtkmm.modules
+index 8829316..802cb2d 100644
+--- a/gtk-osx/modulesets-stable/gtk-osx-gtkmm.modules
++++ b/gtk-osx/modulesets-stable/gtk-osx-gtkmm.modules
+@@ -143,7 +143,7 @@
+       <dep package="cairomm"/>
+       <dep package="pangomm"/>
+       <dep package="atkmm"/>
+-      <dep package="gtk-4.0"/>
++      <dep package="gtk-4"/>
+     </dependencies>
+   </meson>
+ 
+diff --git a/gtk-osx/modulesets-stable/gtk-osx-python.modules b/gtk-osx/modulesets-stable/gtk-osx-python.modules
+index c795d31..8f7d89f 100644
+--- a/gtk-osx/modulesets-stable/gtk-osx-python.modules
++++ b/gtk-osx/modulesets-stable/gtk-osx-python.modules
+@@ -147,7 +147,7 @@
+     </after>
+   </autotools>
+ 
+-  <distutils id="pygments">
++  <distutils id="pygments" python3="1">
+     <branch repo="pymodules" version="2.9.0"
+             module="ba/6e/7a7c13c21d8a4a7f82ccbfe257a045890d4dbf18c023f985f565f97393e3/Pygments-2.9.0.tar.gz">
+     </branch>
+diff --git a/gtk-osx/modulesets-stable/gtk-osx.modules b/gtk-osx/modulesets-stable/gtk-osx.modules
+index 3fc097b..597409a 100644
+--- a/gtk-osx/modulesets-stable/gtk-osx.modules
++++ b/gtk-osx/modulesets-stable/gtk-osx.modules
+@@ -342,6 +342,7 @@
+       <dep package="graphene"/>
+       <dep package="libsass"/>
+       <dep package="libepoxy"/>
++      <dep package="gdk-pixbuf"/>
+     </dependencies>
+   </meson>
+ 
