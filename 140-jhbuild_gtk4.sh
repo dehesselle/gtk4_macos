@@ -34,8 +34,14 @@ if $CI; then   # break in CI, otherwise we get interactive prompt by JHBuild
   error_trace_enable
 fi
 
+# Set PYTHON so libxml2 and pygments pick it up to build the bindings for the
+# desired Python version.
+PYTHON=$BIN_DIR/python3 jhbuild build \
+  python3 \
+  libxml2 \
+  pygments
+
 jhbuild build \
   meta-gtk-osx-bootstrap \
-  pygments \
   gtk-4 \
   gtkmm4

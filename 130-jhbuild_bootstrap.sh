@@ -34,7 +34,4 @@ if $CI; then   # break in CI, otherwise we get interactive prompt by JHBuild
   error_trace_enable
 fi
 
-# make necessary adjustments
-patch -p1 < "$SELF_DIR"/modulesets-stable.patch
-
 jhbuild bootstrap-gtk-osx
